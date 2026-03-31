@@ -1,0 +1,104 @@
+db.users.insertMany(
+  [
+    {
+    "name": "John",
+    "age": 24,
+    "email": "john@mail.com",
+    "bestFriend": "65f1c98b8d2a5a001f3e4b5c",
+    "hobbies": ["Reading", "Cycling", "Gaming"],
+    "address": {
+        "street": "Ulica 2",
+        "city": "Skopje"
+        }
+  },
+  {
+    "name": "Ana",
+    "age": 29,
+    "email": "ana.smith@mail.com",
+    "hobbies": [
+      "Painting",
+      "Hiking",
+      "Cooking"
+    ],
+    "address": {
+      "street": "Glavna 15",
+      "city": "Bitola"
+    }
+  },
+  {
+    "name": "Marko",
+    "age": 32,
+    "email": "marko.jovanov@mail.com",
+    "hobbies": [
+      "Photography",
+      "Swimming",
+      "Traveling"
+    ],
+    "address": {
+      "street": "Partizanska 7",
+      "city": "Ohrid"
+    }
+  },
+  {
+    "name": "Elena",
+    "age": 19,
+    "email": "elena.k99@mail.com",
+    "hobbies": [
+      "Dancing",
+      "Reading",
+      "Yoga"
+    ],
+    "address": {
+      "street": "Mladinska 23",
+      "city": "Tetovo"
+    }
+  }
+]
+)
+
+db.users.updateOne({ _id: ObjectId('69cc1a898c4ae6f0b6b3ecb4')}, { $set: { age: 20 } })
+
+db.users.findOne({ _id: ObjectId('69cc1a898c4ae6f0b6b3ecb4') })
+
+db.users.find({ age: { $gte: 20, $lte: 30 } })
+
+db.users.updateOne({ age: { $gte: 29, $lte: 32 } }, { $set: { isSmoker: true } })
+
+db.users.updateMany({ age: { $gt: 29, $lt: 32 } }, { $set: { isSmoker: true } })
+
+db.users.updateMany({ age: { $gte: 29, $lte: 32 } }, { $set: { isSmoker: true } })
+
+db.users.find({ isSmoker: { $exists: true } })
+
+db.users.find({ isSmoker: { $exists: false } })
+
+db.users.deleteOne({ age: 20 })
+
+db.users.deleteMany({ isSmoker: true })
+
+db.users.deleteOne({ _id: ObjectId("69cc1a898c4ae6f0b6b3ecb1") })
+
+db.users.find().sort({ name: -1 })
+
+db.users.find().sort({ name: 1 })
+
+db.users.find().sort({ age: 1 }).limit(2)
+
+db.users.find({ isSmoker: { $exists: true } })
+
+db.users.replaceOne({ isSmoker: false }, 
+{
+  name: 'Elena',
+  age: 25,
+  email: 'elena.k99@mail.com',
+  address: {
+    street: 'Mladinska 23',
+    city: 'Tetovo'
+  },
+  isSmoker: false
+})
+
+Opcii za kreiranje na kolekcija:
+
+1. db.cars.insertOne({ model: "Mercedes" }) -> ke se kreira cars dokolku ne postoela
+2. db.createCollection("cars") -> se kreira kolekcija cars

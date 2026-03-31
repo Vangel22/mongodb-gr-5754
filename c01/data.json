@@ -1,0 +1,55 @@
+[
+    {
+    "name": "John",
+    "age": 24,
+    "email": "john@mail.com",
+    "bestFriend": "65f1c98b8d2a5a001f3e4b5c",
+    "hobbies": ["Reading", "Cycling", "Gaming"],
+    "address": {
+        "street": "Ulica 2",
+        "city": "Skopje"
+        }
+  },
+  {
+    "name": "Ana",
+    "age": 29,
+    "email": "ana.smith@mail.com",
+    "hobbies": [
+      "Painting",
+      "Hiking",
+      "Cooking"
+    ],
+    "address": {
+      "street": "Glavna 15",
+      "city": "Bitola"
+    }
+  },
+  {
+    "name": "Marko",
+    "age": 32,
+    "email": "marko.jovanov@mail.com",
+    "hobbies": [
+      "Photography",
+      "Swimming",
+      "Traveling"
+    ],
+    "address": {
+      "street": "Partizanska 7",
+      "city": "Ohrid"
+    }
+  },
+  {
+    "name": "Elena",
+    "age": 19,
+    "email": "elena.k99@mail.com",
+    "hobbies": [
+      "Dancing",
+      "Reading",
+      "Yoga"
+    ],
+    "address": {
+      "street": "Mladinska 23",
+      "city": "Tetovo"
+    }
+  }
+]
