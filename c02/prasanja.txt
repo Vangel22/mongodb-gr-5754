@@ -1,0 +1,40 @@
+1. Glavni operacii vo MongoDB?
+
+Create
+insertOne
+insertMany
+
+Read:
+find
+findOne
+
+Update:
+updateOne
+updateMany
+
+Delete
+deleteOne
+deleteMany
+
+2. Kakov tip na db e MongoDB?
+
+Nerelaciona databaza. BSON format. Kluc-vrednost podatoci
+
+person {
+    name: "John"
+}
+
+name - Kluc
+"John" - Vrednost
+
+3. Kako se vikase formatot na podatocite vo MongoDB?
+
+BSON - Binary json
+
+4. Dali moze MongoDB da se instalira lokalno na nasiot kompjuter?
+
+Moze da se instalira lokalno
+
+5. Vo koi slucai koristenjeto na MongoDB e preporacano?
+
+Koga ni treba fleksibilnost na podatocite, imame rabota vo realno vreme, pogodno za e-shopovi, streaming platformi.
