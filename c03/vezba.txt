@@ -1,0 +1,17 @@
+Vezba 1
+
+1. getByEmail funkcija vo modelot
+2. getUserByEmail vo controllerot
+3. ruta za zemanje na koristnik spored negoviot email
+
+Vezba 2
+
+- Povtorete go celiot chas br.3, so vasiot model od domasna 2, modelot za knigi.
+- Imate opcija kaj avtor za modelot da iskoristite relacii t.e:
+
+{
+    author: {
+        type: mongoose.SchemaTypes.ObjectId,
+        ref: "User"
+    }
+}
